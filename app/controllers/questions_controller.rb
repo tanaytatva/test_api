@@ -22,7 +22,7 @@ class QuestionsController < ApplicationController
 
   def update
     question = Question.find_by(id: params[:id])
-    question.update(question_params)
+    question.update_attributes(question_params)
     render json: question.to_json, status: 200
   end
 
