@@ -39,6 +39,6 @@ class QuestionsController < ApplicationController
   private
 
   def question_params
-    params.require(:question).permit(:role_id, :mapping_id, :question_type, :is_required, :team_stage, :appear, :conditions, :frequency)
+    params.require(:question).permit(:question, :role_id, :mapping_id, :question_type, :is_required, :team_stage, :appear, :conditions, :frequency)
   end
 end
