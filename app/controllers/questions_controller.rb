@@ -17,13 +17,13 @@ class QuestionsController < ApplicationController
 
   def create
     question = Question.create(question_params)
-    render json: question.to_json.to_json(:include => {:mapping => {:only => [:mapping_name, :id]}, :role => {:only => [:name, :id]} }), status: 200, status: 200
+    render json: question.to_json(:include => {:mapping => {:only => [:mapping_name, :id]}, :role => {:only => [:name, :id]} }), status: 200, status: 200
   end
 
   def update
     question = Question.find_by(id: params[:id])
     question.update_attributes(question_params)
-    render json: question.to_json.to_json(:include => {:mapping => {:only => [:mapping_name, :id]}, :role => {:only => [:name, :id]} }), status: 200, status: 200
+    render json: question.to_json(:include => {:mapping => {:only => [:mapping_name, :id]}, :role => {:only => [:name, :id]} }), status: 200, status: 200
   end
 
   def destroy
