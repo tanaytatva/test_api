@@ -5,5 +5,6 @@ Rails.application.routes.draw do
     collection do
       get :mapping_index
       get :role_index
+    end
   end
 end
